@@ -1,3 +1,6 @@
+import { Router } from '@angular/router';
+import { Thought } from '../thought';
+import { ThoughtService } from './../thought-service.service';
 import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 
 @Component({
@@ -8,25 +11,30 @@ import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 })
 export class CreateThoughtComponent implements OnInit {
 
-  public thought = {
-    id: '1',
-    content: 'Aprendendo Angular',
-    author: 'Carlos',
-    template: ''
+  public thought: Thought = {
+    content: '',
+    author: '',
+    template: 'modelo1'
   }
 
-  constructor() { }
+  options = ['option 1', 'option 2', 'option 3']
 
-  ngOnInit(): void {
-    this.thought.content = "Aprendendo Javascript"
-  }
+  constructor
+  (
+    private service: ThoughtService,
+    private router: Router
+  ) { }
+
+  ngOnInit(): void {}
 
   makeThought() {
-    alert("Pensamento criado");
+    this.service.criar(this.thought).subscribe(() => {
+      this.router.navigate(['/listarPensamento']);
+    })
   }
 
   cancel() {
-
+    this.router.navigate(['/listarPensamento']);
   }
 
 }

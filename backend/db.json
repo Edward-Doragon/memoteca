@@ -1,0 +1,46 @@
+{
+  "thoughts": [
+    {
+      "id": 1,
+      "content": "Aprendendo AngularJs",
+      "author": "Carlos",
+      "template": "modelo1"
+    },
+    {
+      "id": 2,
+      "content": "Aprendendo Angular 12",
+      "author": "Carlos",
+      "template": "modelo2"
+    },
+    {
+      "id": 3,
+      "content": "Aprendendo Typescript",
+      "author": "Carlos",
+      "template": "modelo3"
+    },
+    {
+      "content": "o post está funcionando ?",
+      "author": "cralos",
+      "template": "modelo3",
+      "id": 4
+    },
+    {
+      "content": "está cedo ou tarde, o arquivo salva automaticamente ?",
+      "author": "carlos",
+      "template": "modelo3",
+      "id": 5
+    },
+    {
+      "content": "pensando.....",
+      "author": "carlos",
+      "template": "modelo1",
+      "id": 6
+    },
+    {
+      "content": "teste",
+      "author": "teste",
+      "template": "modelo3",
+      "id": 7
+    }
+  ]
+}
